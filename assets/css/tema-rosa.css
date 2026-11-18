@@ -1,0 +1,174 @@
+/*
+ AULA VOLT | TEMA ROSA EMPOLVADO + ROJO FRAMBUESA
+ =================================================
+ CÓMO CAMBIAR LOS COLORES: editá SOLO los valores del bloque :root.
+ El CSS se agrega al final de index.html, DESPUÉS de los otros estilos.
+ No afecta clases, ejercicios ni guardado de progreso.
+*/
+
+/* ✿ 1. PALETA PERSONALIZABLE: se puede cambiar con códigos hexadecimales */
+:root {
+  --rosa-fondo:       #FAF6F8; /* fondo general, rosa casi blanco */
+  --rosa-tarjeta:     #FFFFFF; /* tarjetas y zona de lectura */
+  --rosa-texto:       #3D2933; /* texto principal: ciruela oscuro */
+  --rosa-secundario:  #705963; /* texto auxiliar */
+  --rosa-borde:       #EADBE2; /* líneas suaves */
+  --rosa-vino:        #4E293C; /* cabecera de la web */
+  --rosa-frambuesa:   #9D3E5C; /* botones y elementos activos */
+  --rosa-frambuesa-hover:#822E49; /* botón al pasar el mouse */
+  --rosa-suave:       #F9ECF1; /* fondo de destacados */
+  --rosa-rosa-medio:  #D997AF; /* progreso y bordes destacados */
+  --rosa-hero-final:  #81506A; /* extremo claro de la portada */
+  --rosa-crema:       #FFF9FA; /* superficies ligeramente cálidas */
+  --rosa-salvia:      #39735F; /* verde discreto = aprobado/correcto */
+  --rosa-alerta:      #8B5D36; /* ámbar suave = precaución */
+
+  /* Variables originales de Aula Volt; no es necesario tocarlas */
+  --bg:var(--rosa-fondo);
+  --panel:var(--rosa-tarjeta);
+  --ink:var(--rosa-texto);
+  --muted:var(--rosa-secundario);
+  --line:var(--rosa-borde);
+  --dark:var(--rosa-vino);
+  --blue:var(--rosa-frambuesa);
+  --teal:var(--rosa-frambuesa);
+  --yellow:#F1BFD0;
+  --good:var(--rosa-salvia);
+  --warn:var(--rosa-alerta);
+}
+
+/* 2. TIPOGRAFÍA Y BASE */
+body {background:var(--rosa-fondo);color:var(--rosa-texto);}
+a {color:#88354F;text-decoration-color:#CE9AAF;}
+a:hover {color:#6F283F;}
+button:focus-visible, input:focus-visible, textarea:focus-visible,
+select:focus-visible,a:focus-visible,summary:focus-visible {
+  outline:3px solid #B45A7C;outline-offset:3px;
+}
+::selection {background:#F1CEDD;color:#3D2933;}
+
+/* 3. ENCABEZADO Y NAVEGACIÓN */
+.top {background:var(--rosa-vino);border-bottom:1px solid #76475D;color:#FFF8FA;}
+.logo span {color:#F2BBCD;}
+.logo small {color:#F0C9D7;}
+.logo .logo-bolt {width:18px;height:23px;vertical-align:-4px;fill:#F4C4D3;display:inline-block;}
+.topnav button {color:#F9E9F0;border-color:#94677966;}
+.topnav button:hover,.topnav button.active {
+  background:#75465E;color:#FFF; border-color:#A3738B;
+}
+
+/* 4. CONTENIDO: FONDO CLARO, SIN SATURACIÓN */
+aside {background:#FCF9FA;border-color:var(--rosa-borde);}
+.surface,.sideblock,.stat,.tile,.labcard,.lessonlist details,
+.lv-progress,.lv-controls {background:var(--rosa-tarjeta);border-color:var(--rosa-borde);}
+.surface {box-shadow:0 6px 24px #683D4B0A;}
+.stat strong {color:var(--rosa-vino);}
+.hero {
+  color:#FFF;
+  background:linear-gradient(120deg,var(--rosa-vino) 0%,#68354D 55%,var(--rosa-hero-final) 100%);
+  box-shadow:0 8px 22px #6C3C5117;
+}
+.hero p {color:#FCE9F0;}
+.hero::before {content:"";background:#ECB3C8;opacity:.20;width:132px;height:170px;right:30px;top:-28px;transform:rotate(-10deg);clip-path:polygon(55% 0%,17% 56%,45% 56%,33% 100%,89% 41%,59% 41%,73% 0%);}
+.hero .eyebrow {color:#F8C9D8;}
+
+/* 5. BOTONES Y ELEMENTOS INTERACTIVOS */
+.btn {background:var(--rosa-frambuesa);color:#FFF;}
+.btn:hover {background:var(--rosa-frambuesa-hover);}
+.btn.alt {background:#FAEDF2;color:#6D2E47;border:1px solid #E6C9D5;}
+.btn.alt:hover {background:#F5DFE9;}
+.btn.ghost {background:transparent;color:var(--rosa-texto);border-color:var(--rosa-borde);}
+.btn.ghost:hover {background:var(--rosa-suave);}
+.btn.good {background:var(--rosa-salvia);}
+.btn.good:hover {background:#285744;}
+.btn.danger {background:#FFF2F0;color:#943D46;border:1px solid #EBC9CA;}
+.btn.danger:hover {background:#FCE1E0;}
+
+.pbar {background:#F0E4E9;}
+.pbar>div {background:linear-gradient(90deg,var(--rosa-frambuesa),var(--rosa-rosa-medio));}
+.lessonlist details {border-color:var(--rosa-borde);}
+.lessonlist summary {color:#5D3648;}
+.lessonlist .lessonnav:hover,.lessonlist .lessonnav.active {background:#FAEDF2;}
+.lessonlist .lessonnav.done {color:var(--rosa-salvia);}
+.tile:hover {border-color:#D8A6BA;box-shadow:0 5px 18px #75425712;}
+.pill {color:#773C56;background:#F9EAF0;}
+.pill.green {color:#296A52;background:#E5F1EB;}
+.pill.yellow {color:#805C34;background:#FFF4E5;}
+
+/* 6. CLASES, EJERCICIOS Y MENSAJES (contraste tranquilo) */
+.safety {border-left-color:#C19265;background:#FFF7ED;}
+.safety strong {color:#80552F;}
+.tip {border-left-color:#C17899;background:#FFF4F8;}
+.solved {background:#FCF0F4;}
+.task {background:#F4F9F5;border:1px solid #D5E6D9;}
+.q {border-bottom-color:var(--rosa-borde);}
+.choice {border-color:#E5D6DE;}
+.choice:has(input:checked) {background:#F9E9F0;border-color:#C889A3;}
+.choice input,.material input,.checkline input,.simcontrol input[type=range] {
+  accent-color:var(--rosa-frambuesa);
+}
+.feedback,.note {background:#F9EDF2;border-color:#E9CAD7;}
+.feedback.success,.achievement {background:#F0F7F2;border-color:#C7E0D0;}
+.feedback.fail {background:#FFF7EF;border-color:#EED9BD;}
+.notes,.toolbar input,.toolbar select {border-color:#DAC7D0;}
+.material:has(input:checked) {border-color:#C788A1;background:#FBEFF4;}
+.labcard .missing {color:#866141;}
+
+/* 7. SIMULADORES: ROJOS SUAVES, NO AZULES */
+.simlayout>section,.lv-graphic {background:var(--rosa-crema);border-color:var(--rosa-borde);}
+.bigvalue {color:var(--rosa-frambuesa);}
+.formula {background:#F7E6ED;}
+.switchlamp {background:#BDB0B8;border-color:#E3D6DC;}
+/* El foco encendido permanece amarillo: es un indicador funcional. */
+
+/* 8. BIBLIOTECA: reemplaza los fondos azul oscuro por rosa blanco */
+body .enrichment {border-left-color:var(--rosa-rosa-medio);}
+body .enrich-block {
+  background:var(--rosa-crema);border:1px solid #E9D6DF;color:var(--rosa-texto);
+}
+body .enrich-block strong {color:#8F3653;}
+body .reveal {background:#F9EDF2;border-color:#E8C9D8;}
+body .reveal summary {color:#71334C;}
+body .case-card {
+  background:var(--rosa-crema);border-color:#E9D8E0;color:var(--rosa-texto);
+}
+body .case-card:hover,body .case-card:focus-visible {border-color:#C886A1;}
+body .case-card p {color:var(--rosa-secundario);}
+body .glossary-entry {background:#FFF9FA;border-color:#E9D8E0;}
+body .glossary-entry strong {color:#873650;}
+body .library-search {
+  color:var(--rosa-texto);background:#FFF;border-color:#CFAEBD;
+}
+body .library-search::placeholder {color:#8E7480;}
+body .content-small-note {border-left-color:#C99569;background:#FFF6ED;}
+
+/* 9. LABORATORIO VISUAL (si lo instalás después, también queda combinado) */
+body .lv-tab {background:#FFF;border-color:var(--rosa-borde);color:var(--rosa-texto);}
+body .lv-tab.selected {background:#FAEDF2;border-color:var(--rosa-frambuesa);}
+body .lv-graphic {background:var(--rosa-crema);border-color:var(--rosa-borde);}
+body .lv-paper {fill:#FFF9FA;stroke:#E8D8E0;}
+body .lv-wire {stroke:#895D72;}
+body .lv-wire.lv-flow {stroke:#B84E74;}
+body .lv-resistor {stroke:#75415A;}
+body .lv-source {fill:#7F405B;}
+body .lv-source-text {fill:#FFF;}
+body .lv-value {fill:#58374A;}
+body .lv-hint {fill:#806875;}
+body .lv-contact {fill:#75415A;}
+body .lv-switch {stroke:#75415A;}
+body .lv-led {fill:#E0C8D2;stroke:#BB9BAA;}
+/* El LED encendido conserva el rojo de señal luminosa. */
+body .lv-led.lv-on {fill:#ED5262;stroke:#C93A4A;}
+body .lv-field select,body .lv-field input {border-color:#D6B9C7;}
+body .lv-predict {background:#F9EDF2;border-color:#E7C9D6;}
+body .lv-blank {background:#FCF4F7;color:#795E6A;border-color:#D6B8C5;}
+body .lv-answer {background:#F7F9F5;border-color:#C7DDCC;}
+body .lv-formula {background:#FFF;}
+body .lv-steps li::marker {color:#984260;}
+
+/* 10. IMPRESIÓN: manuales claros en papel */
+@media print {
+  body {background:#FFF;color:#222;}
+  .hero {background:#FFF;color:#222;box-shadow:none;border:1px solid #DDD;}
+  .hero p,.hero .eyebrow {color:#333;}
+}
