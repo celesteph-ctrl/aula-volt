@@ -4,7 +4,9 @@ Sitio web educativo en **HTML, CSS y JavaScript**, listo para publicar mediante 
 
 ## Qué incluye
 
-- 33 clases organizadas en 8 módulos.
+- 33 clases organizadas en 8 módulos, ahora con explicaciones complementarias en **cada clase**.
+- Biblioteca con 12 casos prácticos y glosario de 37 términos.
+- Tres diagramas SVG integrados a clases de circuitos.
 - 22 prácticas guiadas según los materiales que tengas.
 - 4 simuladores: ley de Ohm, resistencias serie/paralelo, consumo y LED virtual.
 - Cuestionarios, anotaciones, seguimiento del progreso, exportación e importación JSON.
@@ -88,3 +90,33 @@ Los ejercicios no habilitan a manipular instalaciones eléctricas domiciliarias.
 ## Tecnología y licencias
 
 Aplicación estática independiente, sin servicios externos ni analíticas. El contenido de este proyecto no incorpora una licencia de redistribución específica: podés agregar una licencia a tu repositorio si querés habilitar formalmente su reutilización por terceros.
+
+
+## Actualización: Biblioteca práctica (noviembre 2026)
+
+Se agregaron los archivos:
+
+- `assets/js/extra-content.js`: profundización de las 33 clases, 12 casos y glosario.
+- `assets/css/extra.css`: estilos para fichas, casos y glosario.
+- `assets/diagrams/*.svg`: 3 diagramas de circuitos.
+
+Se modificaron `index.html`, `assets/js/app.js` y `README.md`. **No hace falta cambiar `assets/js/course-data.js`** para esta actualización.
+
+### Subir esta actualización al repositorio ya publicado
+
+1. **Antes de nada**, abrí la web publicada, entrá a **Mi progreso** y descargá un archivo JSON de copia. Guardalo fuera del repositorio.
+2. Entrá a tu repositorio `celesteph-ctrl/aula-volt` en GitHub y elegí **Add file > Upload files**.
+3. Descomprimí el ZIP en tu computadora y cargá el contenido de la carpeta del proyecto (no la carpeta contenedora). GitHub puede pedir confirmar la sustitución de archivos que ya existen.
+4. Es indispensable que `index.html` siga en la raíz y los archivos `assets/` mantengan sus nombres y carpetas.
+5. Confirmá con **Commit changes** en `main`. No borres tus archivos previos que no figuren en esta actualización.
+6. Actualizá la web en el navegador; si ves la versión antigua, probá recarga forzada o una pestaña privada.
+
+El guardado original se mantiene con la misma clave de localStorage (`aula-volt-v2-progress`). Como se usa el mismo dominio y ruta, los avances existentes deberían mantenerse en el mismo navegador, siempre que no hayas borrado sus datos. Podés restaurarlos desde JSON si hace falta. **Nunca subas el JSON personal a un repositorio público**.
+
+### Si GitHub te resulta difícil
+
+Podés subir solo los archivos nuevos (`assets/js/extra-content.js`, `assets/css/extra.css`, `assets/diagrams/*.svg`) y después reemplazar `index.html` y `assets/js/app.js` por las versiones de este paquete.
+
+### Criterios didácticos
+
+Los casos nuevos priorizan observación, cálculo y simulación. Los únicos usos opcionales del multímetro se limitan a pilas AA sueltas o resistores sin fuente, siguiendo el manual del instrumento; ningún caso implica tomar mediciones en la red eléctrica.

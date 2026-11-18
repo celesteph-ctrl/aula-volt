@@ -1,0 +1,28 @@
+/* Aula Volt · complementos educativos */
+.topnav {overflow-x:auto; scrollbar-width:thin;}
+.topnav button {white-space:nowrap; flex-shrink:0;}
+.enrichment {border-left:4px solid #45d8cb;}
+.enrich-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:16px}
+.enrich-block {border:1px solid rgba(120,160,190,.28);border-radius:14px;padding:16px;background:rgba(20,46,65,.32)}
+.enrich-block strong{display:block;color:#83e7df;margin-bottom:8px;font-size:.95rem}
+.enrich-block p{margin:0;line-height:1.7}
+.enrich-block.wide{grid-column:1/-1}
+.reveal {padding:14px 16px;border:1px solid rgba(126,174,193,.4);border-radius:12px;background:rgba(23,50,71,.5);margin-top:14px}
+.reveal summary {font-weight:700;cursor:pointer; color:#d0f8f3}
+.reveal p{margin:12px 0 0}
+.library-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.case-card{display:flex;flex-direction:column;align-items:flex-start;text-align:left;min-height:185px;color:inherit;border:1px solid rgba(133,162,195,.26);background:rgba(27,48,71,.65);border-radius:14px;padding:17px;cursor:pointer}
+.case-card:hover,.case-card:focus-visible{border-color:#56cfc4;outline-offset:3px}
+.case-card strong{font-size:1rem;line-height:1.35;margin:12px 0 6px}
+.case-card p{margin:0;color:#c1d0dd;font-size:.9rem;line-height:1.5}
+.case-card .small{margin-top:auto;padding-top:10px}
+.glossary-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.glossary-entry{padding:13px 15px;border:1px solid rgba(133,162,195,.22);border-radius:12px;background:rgba(22,47,67,.6)}
+.glossary-entry strong{color:#b6f0e8}
+.glossary-entry p{margin:7px 0 0;font-size:.94rem;line-height:1.55}
+.library-search{width:100%;max-width:580px;box-sizing:border-box;margin:8px 0 17px;padding:13px 15px;border:1px solid #53788b;background:#14283c;border-radius:10px;color:#fff;font-size:1rem}
+.content-small-note{padding:13px 15px;border-left:3px solid #edc66f;background:rgba(231,186,93,.09);border-radius:9px;margin:16px 0}
+.case-steps{line-height:1.75}.case-steps li{padding:4px 0}
+.case-meta{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:17px}
+@media(max-width:1000px){.library-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.enrich-grid,.library-grid,.glossary-grid{grid-template-columns:1fr}.enrich-block.wide{grid-column:auto}}
