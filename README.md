@@ -9,6 +9,7 @@ Sitio web educativo en **HTML, CSS y JavaScript**, listo para publicar mediante 
 - Tres diagramas SVG integrados a clases de circuitos.
 - 22 prácticas guiadas según los materiales que tengas.
 - 4 simuladores: ley de Ohm, resistencias serie/paralelo, consumo y LED virtual.
+- **Nuevo: laboratorio visual** con 4 misiones de predicción, circuitos SVG animados, cálculo explicado y registro de experimentos.
 - Cuestionarios, anotaciones, seguimiento del progreso, exportación e importación JSON.
 - Diseño adaptable para computadora y celular.
 
@@ -120,3 +121,21 @@ Podés subir solo los archivos nuevos (`assets/js/extra-content.js`, `assets/css
 ### Criterios didácticos
 
 Los casos nuevos priorizan observación, cálculo y simulación. Los únicos usos opcionales del multímetro se limitan a pilas AA sueltas o resistores sin fuente, siguiendo el manual del instrumento; ningún caso implica tomar mediciones en la red eléctrica.
+
+
+## Novedad: Laboratorio visual interactivo
+
+Se sumó una pestaña **Laboratorio visual**, con experimentos de interruptor, ley de Ohm, serie/paralelo y LED limitado por resistencia. Cada ejercicio sigue el método **predecir → comprobar → explicar**, sin conexiones eléctricas reales. Las prácticas opcionales se limitan a pilas AA y materiales adecuados.
+
+Archivos nuevos:
+
+- `assets/js/visual-workshop.js` (modelos de circuitos, diagramas SVG, predicciones)
+- `assets/css/visual-workshop.css` (apariencia, animaciones, diseño adaptable)
+
+Archivos modificados: `index.html`, `assets/js/app.js` y `README.md`. La actualización no requiere cambiar las 33 clases ni sus evaluaciones.
+
+**Conservar el progreso:** se mantiene la clave `aula-volt-v2-progress`. Las clases aprobadas y las notas anteriores siguen almacenadas, y los experimentos se guardan en el campo adicional `workshopDone`, incluido en las exportaciones JSON existentes. Antes de actualizar, descargá tu copia de progreso.
+
+**Para subir solo esta actualización:** descomprimí el ZIP de actualización y subí sus archivos a las mismas rutas, sin crear una carpeta anidada. Reemplazá `index.html` y `assets/js/app.js` existentes, y agregá los dos archivos nuevos. Si aún no publicaste la Biblioteca, es mejor subir el **ZIP completo actualizado**, porque contiene también las ampliaciones de clases.
+
+**Límites del simulador:** los cálculos usan resistencias ideales y una caída aproximada de 2 V para el LED rojo. No se representan tolerancias, temperatura, resistencia interna de pilas ni otras características de los componentes reales. No se debe utilizar como herramienta de validación de instalaciones eléctricas.
